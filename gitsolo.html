@@ -1,0 +1,29 @@
+# 1. Cek sedang berada di branch apa
+git branch --show-current
+
+# Kalau bukan 'main' berarti kamu sedang ada di branch lain.
+# Untuk kerja solo, biasanya semua kerja di branch 'main'
+# Jadi kalau perlu pindah ke main:
+# git checkout main
+
+# 2. Tarik update terbaru dari GitHub
+# Tujuannya: pastikan kode lokal terbaru, biar tidak bentrok saat push
+git pull origin main --rebase
+
+# 3. Tambahkan semua perubahan yang kamu buat
+git add .
+
+# Bisa juga pilih file tertentu:
+# git add resources/views/welcome.blade.php
+
+# 4. Simpan perubahan dengan pesan yang jelas
+git commit -m "feat: tambah google analitik"
+
+# Tips format pesan:
+# feat: untuk fitur
+# fix: untuk perbaikan bug
+# chore: perubahan kecil
+# docs: dokumentasi
+
+# 5. Kirim perubahan ke GitHub
+git push origin main
