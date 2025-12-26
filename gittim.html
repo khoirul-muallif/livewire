@@ -1,0 +1,27 @@
+# 1. Pastikan di branch utama
+git checkout main
+
+# 2. Ambil update terbaru dari tim
+git pull origin main --rebase
+
+# 3. Buat branch fitur pribadi
+git checkout -b feature/login
+
+
+# 4. Kerja (edit file)
+git add .
+git commit -m "feat: fix bug login"
+
+
+# 5. Sinkronkan ulang dengan main (hindari conflict)
+git pull origin main --rebase
+
+
+# 6. Push branch fitur ke GitHub
+git push origin feature/login
+
+
+# 7. (Setelah PR di-merge)
+git checkout main
+git pull origin main
+git branch -d feature/login
